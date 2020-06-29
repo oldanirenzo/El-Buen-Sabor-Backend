@@ -1,5 +1,5 @@
 const { response } = require("express");
-const RubroGeneral = require("../models/RubroGeneral");
+const RubroGeneral = require("../models/RubroGeneralModel");
 
 const crearRubro = async (req, res = response) => {
   const { denominacion } = req.body;

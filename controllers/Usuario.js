@@ -1,5 +1,5 @@
 const bcrypt = require("bcrypt");
-const Usuario = require("../models/UsuarioSchema");
+const Usuario = require("../models/UsuarioModel");
 const { response } = require("express");
 
 const getUsuarios = async (req, res = response) => {
