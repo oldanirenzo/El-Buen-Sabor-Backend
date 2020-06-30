@@ -56,8 +56,29 @@ const deleteRubrosArticulos = async (req, res = response) => {
   }
 };
 
+const updateRubrosArticulos = async (req, res = response) => {
+  const id = req.params.id;
+  try {
+    const rubroActualizado = await RubroArticulo.findByIdAndUpdate(
+      id,
+      req.body
+    );
+    console.log(rubroActualizado);
+    res.json({
+      ok: true,
+      msg: "Rubro actualizado",
+    });
+  } catch (error) {
+    res.status(500).json({
+      ok: false,
+      msg: "Error al actualizar los rubros de articulos.",
+    });
+  }
+};
+
 module.exports = {
   crearRubroArticulo,
   getRubrosArticulos,
   deleteRubrosArticulos,
+  updateRubrosArticulos,
 };

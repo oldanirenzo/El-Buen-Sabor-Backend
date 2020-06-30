@@ -6,7 +6,7 @@ const DomicilioSchema = Schema({
     required: true,
   },
   numero: {
-    type: Number,
+    type: String,
     required: true,
   },
   localidad: {
@@ -15,7 +15,7 @@ const DomicilioSchema = Schema({
   },
   usuario: {
     type: Schema.Types.ObjectId,
-    ref: "usuario",
+    ref: "Usuario",
     required: true,
   },
   borrado: {

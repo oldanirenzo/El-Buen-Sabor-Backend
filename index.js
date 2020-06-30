@@ -24,9 +24,9 @@ app.use("/api/rubroGeneral", require("./routes/RubroGeneral"));
 
 app.use("/api/rubroArticulo", require("./routes/RubroArticulos"));
 
-
+app.use("/api/domicilio", require("./routes/Domicilio"));
 
 // Escuchar peticiones
 app.listen(process.env.PORT, () => {
-  console.log(` Servidor corriendo en puesto ${process.env.PORT}`);
+  console.log(` Servidor corriendo en puerto ${process.env.PORT}`);
 });

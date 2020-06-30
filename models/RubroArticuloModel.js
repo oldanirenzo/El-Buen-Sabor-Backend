@@ -6,10 +6,10 @@ const RubroArticuloSchema = Schema({
     required: true,
     unique : true
   },
-  rubroArticulo: [{
+  rubroArticulo: {
     type: Schema.Types.ObjectId,
     ref: "RubroArticulo",
-  }],
+  },
   borrado: {
     type: Boolean,
     default: false,

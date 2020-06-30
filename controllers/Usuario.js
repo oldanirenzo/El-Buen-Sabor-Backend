@@ -75,6 +75,7 @@ const loginUsuario = async (req, res = response) => {
         msg: "Password incorrecto",
       });
     }
+
     res.json({
       ok: true,
       _id: usuario._id,
